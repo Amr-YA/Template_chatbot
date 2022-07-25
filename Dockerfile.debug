@@ -1,0 +1,7 @@
+FROM rasa_base
+WORKDIR /app
+ENV HOME=/app
+COPY . .
+EXPOSE 5005
+USER 1001
+CMD ["bash", "run.sh"]

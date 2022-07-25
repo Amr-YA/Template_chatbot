@@ -1,0 +1,33 @@
+version: "2.0"
+
+rules:
+
+- rule: Say msg
+  steps:
+  - intent: msg
+  - action: utter_msg
+
+
+- rule: Say btn
+  steps:
+  - intent: btn
+  - action: btn_action
+
+
+- rule: Say qr
+  steps:
+  - intent: qr
+  - action: qr_action
+
+- rule: Say qr_payload
+  steps:
+  - intent: qr_payload
+  - action: utter_qr_success
+
+- rule: Say bt_payload
+  steps:
+  - intent: bt_payload
+  - action: utter_bt_success
+
+
+

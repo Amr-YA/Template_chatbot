@@ -1,0 +1,33 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- msg:
+    use_entities: []
+- btn:
+    use_entities: []
+- qr:
+    use_entities: []
+- bt_payload:
+    use_entities: []
+- qr_payload:
+    use_entities: []
+
+responses:
+  utter_msg:
+  - text: sample response msg with no attachment
+  utter_qr_success:
+  - text: received a quick reply
+  utter_bt_success:
+  - text: received a button
+
+
+actions:
+- btn_action
+- qr_action
+
+e2e_actions: []

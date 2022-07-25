@@ -1,0 +1,40 @@
+version: "2.0"
+nlu:
+- intent: msg
+  examples: |
+    - message
+    - empty message
+    - msg
+    - message template
+
+- intent: btn
+  examples: |
+    - buttons
+    - message with buttons
+    - button template
+    - send buttons
+    - btn
+
+- intent: qr
+  examples: |
+    - qr
+    - quick replies
+    - message with quick reply
+    - msg with qr
+
+- intent: qr_payload
+  examples: |
+    - qr_1
+    - qr_2
+    - qr_3
+    - qr_4
+    - qr_5
+    - qr_6
+
+- intent: bt_payload
+  examples: |
+    - button_1
+    - button_2
+    - button_3
+
+

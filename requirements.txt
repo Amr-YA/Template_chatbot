@@ -1,0 +1,6 @@
+pip==20.1.1
+rasa==2.6.2
+spacy
+click==8.0.4
+pandas
+cdifflib
