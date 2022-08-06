@@ -1,25 +1,33 @@
-# KFUPM Bot
-
+# Template Chatbot
+A sample project using Rasa framework to build a chatbot with interactive elements.
+If bot is deployed to a FB page or Whatsapp, the Bot can respond in 3 ways
+- Text message only
+- Text message with buttons
+- Text message with quick replies
 # Running the service:
-## You can build the dockerfile in the repo with the following commands:
-`
+## Building
+You can build the dockerfile in the repo with the following commands:
+```
 docker build -t temp_bot .
-`
+```
 
-## Start the service as follows:
-`
+## Running
+Start the service frjom the build docker image:
+```
 docker run --rm -p 5005:5005 -t temp_bot
-`
+```
 
 # APIs to interact with the Bot:
-## to send any message to the bot you can use the example request below:
-`
+## Send
+To send any message to the bot you can use the example request below:
+```
 response = requests.post("http://localhost:5005/webhooks/rest/webhook", json={"sender": "as0123",
  										                                      "message": "text"})
-`
- 										 
-## response is expected to be like:
-`
+```
+
+## Replies
+response is expected to be like:
+```
 [
     {
         "recipient_id": "as0123",
@@ -75,4 +83,4 @@ response = requests.post("http://localhost:5005/webhooks/rest/webhook", json={"s
 
     }
 ]
-`
+```
