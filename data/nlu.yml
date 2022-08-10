@@ -37,4 +37,23 @@ nlu:
     - button_2
     - button_3
 
+- intent: nlu_fallback
+  examples: |
+    - no
+    - asdfasdf
+    - I dont want you
+    - handoff
+    - fuck off
+    - fallback 
 
+- intent: out_of_scope
+  examples: |
+    - what's the time
+    - how much does it costs
+    - fetch me a glass of water
+    - I need to sleep
+
+- intent: handover
+  examples: |
+    - hand over to agent
+    - let me talk to human

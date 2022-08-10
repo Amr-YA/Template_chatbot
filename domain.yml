@@ -16,6 +16,8 @@ intents:
     use_entities: []
 - qr_payload:
     use_entities: []
+- handover:
+    use_entities: []
 
 responses:
   utter_msg:
@@ -24,10 +26,20 @@ responses:
   - text: received a quick reply
   utter_bt_success:
   - text: received a button
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_default:
+  - text: I'm sorry, I can't help you.
+  utter_handover:
+  - text: |
+      "I am passing you to a human."
+      "Please wait..."
 
 
 actions:
 - btn_action
 - qr_action
+- action_default_ask_affirmation 
+- action_default_fallback
 
 e2e_actions: []
